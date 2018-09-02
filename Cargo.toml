@@ -1,0 +1,21 @@
+[package]
+name = "remove_empty_subdirs"
+version = "0.1.0"
+authors = ["Kaizhao Zhang <zhangkaizhao@gmail.com>"]
+description = "Recursively remove empty sub-directories"
+homepage = "https://github.com/zhangkaizhao/remove_empty_subdirs"
+documentation = "https://docs.rs/remove_empty_subdirs"
+readme = "README.md"
+keywords = ["file", "directory", "filesystem"]
+categories = ["filesystem"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/zhangkaizhao/remove_empty_subdirs"
+
+[dev-dependencies.clap]
+version = "~2.32.0"
+
+[dev-dependencies.tempfile]
+version = "3"
+
+[dev-dependencies.walkdir]
+version = "2"
