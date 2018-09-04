@@ -38,7 +38,7 @@ fn _remove_empty_subdirs(dir: &Path, top_dir: &Path) -> io::Result<()> {
             // Ignore hidden directories which start with ".", e.g. ".git".
             let is_hidden = path.file_name().unwrap().to_str().unwrap().starts_with(".");
             if !is_hidden {
-                let can_stop = _try_to_remove_empty_dir(&path, &top_dir.clone());
+                let can_stop = _try_to_remove_empty_dir(&path, &top_dir);
                 if !can_stop {
                     // Continue to remove sub-directories.
                     _remove_empty_subdirs(&path, &top_dir)?;
@@ -61,7 +61,7 @@ fn _try_to_remove_empty_dir(dir: &Path, top_dir: &Path) -> bool {
             println!("Empty directory `{}` is removed.", dir.display());
             // Then try to remove parent directory.
             let parent_dir = dir.parent().unwrap();
-            _try_to_remove_empty_dir(&parent_dir, &top_dir.clone());
+            _try_to_remove_empty_dir(&parent_dir, &top_dir);
             true
         }
         Err(ref err) if err.kind() == io::ErrorKind::PermissionDenied => {
