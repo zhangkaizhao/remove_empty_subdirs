@@ -14,7 +14,7 @@ Note:
 Add the library as a dependency to your project by inserting
 
 ```toml
-remove_empty_subdirs = "0.1.0"
+remove_empty_subdirs = "0.1.1"
 ```
 
 into the `[dependencies]` section of your `Cargo.toml` file.
