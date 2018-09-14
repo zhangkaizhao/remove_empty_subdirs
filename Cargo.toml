@@ -1,6 +1,6 @@
 [package]
 name = "remove_empty_subdirs"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Kaizhao Zhang <zhangkaizhao@gmail.com>"]
 description = "Recursively remove empty sub-directories"
 homepage = "https://github.com/zhangkaizhao/remove_empty_subdirs"
