@@ -58,7 +58,8 @@ fn normal() {
             .join("not_empty_1")
             .join("not_empty_21")
             .join("new-file.txt"),
-    ].into_iter()
+    ]
+        .into_iter()
         .map(|entry| entry.to_str().unwrap().to_string())
         .collect::<Vec<_>>();
     subpaths.sort_unstable();
@@ -81,7 +82,8 @@ fn normal() {
             .join("not_empty_1")
             .join("not_empty_21")
             .join("new-file.txt"),
-    ].into_iter()
+    ]
+        .into_iter()
         .map(|entry| entry.to_str().unwrap().to_string())
         .collect::<Vec<_>>();
     subpaths.sort_unstable();
@@ -113,7 +115,8 @@ fn hidden_dir() {
         dir.path().join("not_empty").join(".git"),
         dir.path().join("empty_1"),
         dir.path().join("empty_1").join("empty_2"),
-    ].into_iter()
+    ]
+        .into_iter()
         .map(|entry| entry.to_str().unwrap().to_string())
         .collect::<Vec<_>>();
     subpaths.sort_unstable();
@@ -132,7 +135,8 @@ fn hidden_dir() {
         dir.path().to_path_buf(),
         dir.path().join("not_empty"),
         dir.path().join("not_empty").join(".git"),
-    ].into_iter()
+    ]
+        .into_iter()
         .map(|entry| entry.to_str().unwrap().to_string())
         .collect::<Vec<_>>();
     subpaths.sort_unstable();
@@ -228,7 +232,8 @@ fn permission_denied_dir() {
             .join("normal_dir")
             .join("empty_1")
             .join("empty_2"),
-    ].into_iter()
+    ]
+        .into_iter()
         .map(|entry| entry.to_str().unwrap().to_string())
         .collect::<Vec<_>>();
     subpaths.sort_unstable();
@@ -275,7 +280,8 @@ fn permission_denied_dir() {
             .join("permission_denied")
             .join("permission_denied_1")
             .join("empty_3"),
-    ].into_iter()
+    ]
+        .into_iter()
         .map(|entry| entry.to_str().unwrap().to_string())
         .collect::<Vec<_>>();
     subpaths.sort_unstable();

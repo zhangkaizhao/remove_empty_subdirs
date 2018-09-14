@@ -19,8 +19,7 @@ fn main() {
                 .help("Directory to deal with")
                 .index(1)
                 .required(true),
-        )
-        .get_matches();
+        ).get_matches();
 
     let dir = matches.value_of("dir").unwrap();
     let path = Path::new(dir);

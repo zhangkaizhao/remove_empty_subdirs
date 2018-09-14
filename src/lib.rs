@@ -36,7 +36,7 @@ fn _remove_empty_subdirs(dir: &Path, top_dir: &Path) -> io::Result<()> {
         let path = entry.unwrap().path();
         if path.is_dir() {
             // Ignore hidden directories which start with ".", e.g. ".git".
-            let is_hidden = path.file_name().unwrap().to_str().unwrap().starts_with(".");
+            let is_hidden = path.file_name().unwrap().to_str().unwrap().starts_with('.');
             if !is_hidden {
                 let can_stop = _try_to_remove_empty_dir(&path, &top_dir);
                 if !can_stop {
